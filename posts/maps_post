@@ -1,0 +1,21 @@
+import React from 'react';
+
+export default function MyMaps() {
+  const maps = ['EER_02.html'];
+
+  return (
+    <>
+      <h1>My Maps</h1>
+      <div id="map-container">
+        {maps.map((map) => (
+          <iframe
+            key={map}
+            src={`${map}`}
+            width="100%"
+            height="500px"
+          />
+        ))}
+      </div>
+    </>
+  );
+}
